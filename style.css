@@ -1,0 +1,56 @@
+/******************************* GENERAL ************************************/
+body, html
+{
+	margin: 0 0;
+}
+h1
+{
+ color: #67C04F;
+}
+
+
+
+
+
+
+/********************************* SECTION 1 ********************************/
+#intro
+{
+	height: 100px;
+}
+#intro #title
+{
+	text-align: center;
+	padding-top: 25px;
+}
+
+
+/******************************* SECTION PRESENTATION *************************/
+#presentation
+{
+	height: 570px;
+}
+
+#presentation div
+{
+	height: 100%;
+	background-image: url("images/home-automation1.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+@media screen and (min-width: 420px) and (orientation: landscape)
+{
+	#presentation div
+	{
+		height: 100%;
+		background-image: url("images/maison-intelligente-2.jpg");
+		background-repeat: no-repeat;
+		background-position:  58% 50%;
+		background-size: cover;
+	}
+}
+
+
+	
