@@ -2,28 +2,41 @@
 body, html
 {
 	margin: 0 0;
+	padding: 0 0;
 }
-h1
+h1,h2,h3,h4,h5,h6
 {
- color: #67C04F;
+ 	font-family: 'Russo One', sans-serif;
 }
-
-
-
-
-
 
 /********************************* SECTION 1 ********************************/
-#intro
+header
 {
-	height: 100px;
+	height: 150px;
+	background-color: #34373D;
+	/*background-image: linear-gradient(to bottom, #5F5F5F , #909C6D);*/
 }
-#intro #title
 {
+	height: 100%;
+	width: 100%;
+}
+header #title
+{
+	height: 150px;
+	width: 100%;
 	text-align: center;
-	padding-top: 25px;
+	position: relative;
 }
-
+header #title h1
+{
+ 	margin-top: 0px;
+ 	margin-bottom: 0px;
+ 	padding-top: 20px;
+ 	padding-left: 400px;
+ 	color: #B5C39A;
+ 	font-size: 45px;
+ 	position: absolute;
+}
 
 /******************************* SECTION PRESENTATION *************************/
 #presentation
@@ -51,6 +64,87 @@ h1
 		background-size: cover;
 	}
 }
+
+/********************************* ACTIVITY *********************************/
+#activity 
+{
+	height: 400px;
+	
+}
+.flexcontainer
+{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+}
+#article1, #article2
+{
+	height: 90%;
+	width: 48%;
+	margin-top: 20px;
+	border: 1px #909C6D solid;
+	border-radius: 5px;
+	box-shadow: 2px 5px 2px #909C6D;
+}
+#article1, #article2 h3
+{
+	text-align: center;
+	color: #B5C39A;
+
+}
+#architecture
+{
+	height: 80%;
+	background-image: url("images/architecture.png");
+	background-size: 85% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#integration
+{
+	text-align: left;
+	padding-left: 10px;
+	margin-top: 30px; 
+}
+#integration p
+{
+	font-family: "work sans", sans-serif;
+	color: #5F5F5F;
+	font-size: 17px;
+}
+#integration span
+{
+	font-family: 'Russo One', sans-serif;
+	color: #B5C39A; 
+}
+
+/********************************* PORT FOLIO *******************************/
+#port-folio
+{
+	height: 400px;
+	background-image: linear-gradient(to bottom, #909C6D, #BFCE8F);
+}
+
+/********************************* FOOTER ***********************************/
+footer
+{
+	height: 200px;
+	/*background-image: linear-gradient(to bottom, #BFCE8F, #909C6D);*/
+	background-color: #34373D;
+}
+footer div
+{
+	padding-top: 80px;
+}
+
+footer p
+{
+	text-align: center;
+	color: #B5C39A;
+}
+
 
 
 	
