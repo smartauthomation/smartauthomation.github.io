@@ -9,52 +9,58 @@ h1,h2,h3,h4,h5,h6
  	font-family: 'Russo One', sans-serif;
 }
 
+#container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		 "header header"
+		 "presentation presentation"
+		 "activity activity"
+		 "port-folio port-folio"
+		 "footer footer";
+
+}
+
 /********************************* SECTION 1 ********************************/
 header
 {
-	height: 150px;
 	background-color: #34373D;
+	grid-area: header;
 	/*background-image: linear-gradient(to bottom, #5F5F5F , #909C6D);*/
 }
-{
-	height: 100%;
-	width: 100%;
-}
+
 header #title
 {
 	height: 150px;
 	width: 100%;
 	text-align: center;
-	position: relative;
 }
 header #title h1
 {
- 	margin-top: 0px;
- 	margin-bottom: 0px;
+ 	margin: 0px auto 0px auto;
  	padding-top: 20px;
- 	padding-left: 400px;
  	color: #B5C39A;
  	font-size: 45px;
- 	position: absolute;
 }
 
 /******************************* SECTION PRESENTATION *************************/
 #presentation
 {
+	grid-area: presentation;
 	height: 570px;
 }
 
-#presentation div
+/*#presentation div
 {
 	height: 100%;
 	background-image: url("images/home-automation1.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-}
+}*/
 
-@media screen and (min-width: 420px) and (orientation: landscape)
-{
+/*@media screen and (min-width: 420px) and (orientation: landscape)
+{*/
 	#presentation div
 	{
 		height: 100%;
@@ -63,27 +69,20 @@ header #title h1
 		background-position:  58% 50%;
 		background-size: cover;
 	}
-}
 
 /********************************* ACTIVITY *********************************/
 #activity 
 {
-	height: 400px;
-	
-}
-.flexcontainer
-{
-	height: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-content: center;
+	grid-area: activity;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	column-gap: 10px;
+	grid-row-gap: 10px;
 }
 #article1, #article2
 {
-	height: 90%;
-	width: 48%;
-	margin-top: 20px;
+	min-height: 400px;
+	margin: 20px 0px 20px 0px;
 	border: 1px #909C6D solid;
 	border-radius: 5px;
 	box-shadow: 2px 5px 2px #909C6D;
@@ -98,7 +97,7 @@ header #title h1
 {
 	height: 80%;
 	background-image: url("images/architecture.png");
-	background-size: 85% 100%;
+	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -112,7 +111,6 @@ header #title h1
 {
 	font-family: "work sans", sans-serif;
 	color: #5F5F5F;
-	font-size: 17px;
 }
 #integration span
 {
@@ -124,14 +122,14 @@ header #title h1
 #port-folio
 {
 	height: 400px;
+	grid-area: port-folio;
 	background-image: linear-gradient(to bottom, #909C6D, #BFCE8F);
 }
 
 /********************************* FOOTER ***********************************/
 footer
 {
-	height: 200px;
-	/*background-image: linear-gradient(to bottom, #BFCE8F, #909C6D);*/
+	grid-area: footer;	/*background-image: linear-gradient(to bottom, #BFCE8F, #909C6D);*/
 	background-color: #34373D;
 }
 footer div
