@@ -61,19 +61,20 @@ header #title h1
 
 /*@media screen and (min-width: 420px) and (orientation: landscape)
 {*/
-	#presentation div
-	{
-		height: 100%;
-		background-image: url("images/maison-intelligente-2.jpg");
-		background-repeat: no-repeat;
-		background-position:  58% 50%;
-		background-size: cover;
-	}
+#presentation div
+{
+	height: 100%;
+	background-image: url("images/maison-intelligente-2.jpg");
+	background-repeat: no-repeat;
+	background-position:  58% 50%;
+	background-size: cover;
+}
 
 /********************************* ACTIVITY *********************************/
 #activity 
 {
 	grid-area: activity;
+	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 	column-gap: 10px;
@@ -86,6 +87,7 @@ header #title h1
 	border: 1px #909C6D solid;
 	border-radius: 5px;
 	box-shadow: 2px 5px 2px #909C6D;
+
 }
 #article1, #article2 h3
 {
