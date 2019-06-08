@@ -6,144 +6,183 @@ body, html
 }
 h1,h2,h3,h4,h5,h6
 {
- 	font-family: 'Russo One', sans-serif;
+	text-align: center;
+	color: #B5C39A; 
+	font-family: 'Russo One', sans-serif;
 }
 
 #container{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-areas:
-		 "header header"
-		 "presentation presentation"
-		 "activity activity"
-		 "port-folio port-folio"
-		 "footer footer";
-
+	display: flex;
+	flex-direction: column;
 }
-
+@font-face {
+	font-family: 'Patchy Robots Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Patchy Robots Regular'), url('Patchy Robots.woff') format('woff');
+}
 /********************************* SECTION 1 ********************************/
 header
 {
-	background-color: #34373D;
-	grid-area: header;
-	/*background-image: linear-gradient(to bottom, #5F5F5F , #909C6D);*/
+	height: 90px;
+	background-color: #FFFFFF;
 }
 
-header #title
+header h2
 {
-	height: 150px;
-	width: 100%;
-	text-align: center;
+	float: left;
+	color: #5F5F5F;
+	padding-left: 15px;
+	font-family: 'Patchy Robots Regular';
+	margin-bottom: 0px;
+	
 }
-header #title h1
-{
- 	margin: 0px auto 0px auto;
- 	padding-top: 20px;
- 	color: #B5C39A;
- 	font-size: 45px;
+header nav{
+	float: right;
+	margin-right: 50px;
+	margin-top: 9px;
 }
-
+header nav ul{
+	list-style: none;	
+}
+header nav ul li{
+	display: inline;
+	margin-left: 60px;
+	color: #5F5F5F;
+	font-size: 20px;
+}
+.shake{
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+  
+  @keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	
+	20%, 80% {
+	  transform: translate3d(2px, 0, 0);
+	}
+  
+	30%, 50%, 70% {
+	  transform: translate3d(-4px, 0, 0);
+	}
+  
+	40%, 60% {
+	  transform: translate3d(4px, 0, 0);
+	}
+  }
 /******************************* SECTION PRESENTATION *************************/
 #presentation
 {
-	grid-area: presentation;
-	height: 570px;
-}
-
-/*#presentation div
-{
-	height: 100%;
-	background-image: url("images/home-automation1.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-}*/
-
-/*@media screen and (min-width: 420px) and (orientation: landscape)
-{*/
-#presentation div
-{
-	height: 100%;
+	height: 550px;
 	background-image: url("images/maison-intelligente-2.jpg");
 	background-repeat: no-repeat;
-	background-position:  58% 50%;
+	background-position:  65% 50%;
 	background-size: cover;
 }
 
 /********************************* ACTIVITY *********************************/
 #activity 
 {
-	grid-area: activity;
-	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
 	column-gap: 10px;
 	grid-row-gap: 10px;
+	padding: 20px;
+}
+#activity p{
+	margin-top: 40px;
 }
 #article1, #article2
 {
-	min-height: 400px;
-	margin: 20px 0px 20px 0px;
 	border: 1px #909C6D solid;
 	border-radius: 5px;
 	box-shadow: 2px 5px 2px #909C6D;
+}
 
+#architecture{
+	height: 100%;
+	width: 100%;
 }
-#article1, #article2 h3
-{
-	text-align: center;
-	color: #B5C39A;
-
+#architecture img{
+	width: 100%;
+	height: auto;
 }
-#architecture
-{
-	height: 80%;
-	background-image: url("images/architecture.png");
-	background-size: 100% 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-#integration
-{
+#integration{
 	text-align: left;
-	padding-left: 10px;
-	margin-top: 30px; 
 }
-#integration p
-{
+#integration p{
 	font-family: "work sans", sans-serif;
 	color: #5F5F5F;
+	padding-left: 10px;
 }
-#integration span
-{
+#integration span{
 	font-family: 'Russo One', sans-serif;
 	color: #B5C39A; 
 }
-
-/********************************* PORT FOLIO *******************************/
+.invisible{
+	opacity: 0;
+	transition: opacity 1s linear;
+}
+.visible{
+	opacity: 1;
+}
+/********************************* GALLERY *******************************/
+#gallery{
+	padding: 50px 10px 50px 10px;
+	background-image: linear-gradient(to bottom, #909C6D, #BFCE8F);
+}
+#gallery h3{
+	color: #ffffff;
+}
 #port-folio
 {
-	height: 400px;
-	grid-area: port-folio;
-	background-image: linear-gradient(to bottom, #909C6D, #BFCE8F);
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	
+}
+#port-folio img{
+	justify-self: stretch;
+}
+/********************************* CONTACT ***********************************/
+#contact{
+	background-image: url('images/Housing_FeaturedImage.png');
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+	padding-left: 80px;
+}
+#contact h2{
+	padding-top: 150px;
+	text-align: left;
+	color: #5F5F5F;
+	font-family: 'Patchy Robots Regular';
+}
+#contact p{
+	font-size: 20px;
+	color: #ffffff;
 }
 
 /********************************* FOOTER ***********************************/
 footer
-{
-	grid-area: footer;	/*background-image: linear-gradient(to bottom, #BFCE8F, #909C6D);*/
+{	
+	height: 80px;
 	background-color: #34373D;
-}
-footer div
-{
-	padding-top: 80px;
-}
-
-footer p
-{
 	text-align: center;
 	color: #B5C39A;
+	padding-top: 60px;
 }
+
+
 
 
 

@@ -1,6 +1,6 @@
 
 
-let indiceSequence = 0;
+/*let indiceSequence = 0;
 const lineThickness = 10;
 
 const c = document.querySelector("canvas");
@@ -164,5 +164,31 @@ const drawArrow = (sequence) => {
 drawArrow(sequence);
 
 
-/*const titleTopOffset = document.querySelector("h1").offsetTop;
+const titleTopOffset = document.querySelector("h1").offsetTop;
 const titleLeftOffset = document.querySelector("h1").offsetLeft;*/
+
+const title = document.querySelector("header h2");
+const consulting = document.querySelector("#consulting");
+const wiring = document.querySelector("#wiring");
+const programing = document.querySelector("#programing");
+const design = document.querySelector("#design");
+const activity = document.querySelector("#activity");
+
+
+window.onload = () => title.classList.add("shake");
+
+window.onscroll = () => {
+	const rect = activity.getBoundingClientRect();
+	if(rect.y <= 150){
+		consulting.classList.add("visible");
+		setTimeout(() => wiring.classList.add("visible"),500)
+		setTimeout(() => programing.classList.add("visible"),1000)
+		setTimeout(() => design.classList.add("visible"),1500)
+		
+	}
+}
+ 
+
+
+
+
