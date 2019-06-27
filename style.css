@@ -125,10 +125,13 @@ header nav ul li{
 	font-family: 'Russo One', sans-serif;
 	color: #B5C39A; 
 }
-.invisible{
-	opacity: 0;
-	transition: opacity 1s linear;
+@media only screen and (min-width: 600px) {
+	.invisible{
+		opacity: 0;
+		transition: opacity 1s linear;
+	}
 }
+
 .visible{
 	opacity: 1;
 }
