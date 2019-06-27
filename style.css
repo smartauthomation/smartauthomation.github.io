@@ -90,7 +90,7 @@ header nav ul li{
 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
+	grid-template-columns: repeat(auto-fit,minmax(260px, 1fr));
 	column-gap: 10px;
 	grid-row-gap: 10px;
 	padding: 20px;
@@ -162,7 +162,7 @@ header nav ul li{
 	height: 500px;
 	background-repeat: no-repeat;
 	background-position-x: 50%;
-	padding-left: 80px;
+	padding-left: 55px;
 }
 #contact h2{
 	padding-top: 150px;
@@ -171,7 +171,7 @@ header nav ul li{
 	font-family: 'Patchy Robots Regular';
 }
 #contact p{
-	font-size: 20px;
+	font-size: 0.8em;
 	color: #ffffff;
 }
 
