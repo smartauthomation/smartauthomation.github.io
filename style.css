@@ -29,6 +29,7 @@ header
 {
 	height: 90px;
 	background-color: #FFFFFF;
+	width: 100%;
 }
 
 header h2
@@ -37,8 +38,8 @@ header h2
 	color: #5F5F5F;
 	padding-left: 15px;
 	font-family: 'Patchy Robots Regular';
-	margin-bottom: 0px;
-	
+	margin-bottom: 0px;	
+	font-weight: normal;
 }
 header nav{
 	float: right;
@@ -55,6 +56,7 @@ header nav ul li{
 }
 nav a{
 	text-decoration: none;
+	outline: none;
 	color: #5F5F5F;
 }
 @media only screen and (max-width: 600px){
@@ -69,8 +71,11 @@ nav a{
 	backface-visibility: hidden;
 	perspective: 1000px;
 }
-  
-  @keyframes shake {
+.sticky{
+	position: fixed;
+}
+
+@keyframes shake {
 	10%, 90% {
 	  transform: translate3d(-1px, 0, 0);
 	}
@@ -143,7 +148,6 @@ nav a{
 		transition: opacity 1s linear;
 	}
 }
-
 .visible{
 	opacity: 1;
 }
@@ -157,13 +161,11 @@ nav a{
 }
 #port-folio
 {
-	
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
 	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	
+	grid-row-gap: 10px;		
 }
 #port-folio img{
 	justify-self: stretch;
@@ -181,6 +183,7 @@ nav a{
 	text-align: left;
 	color: #5F5F5F;
 	font-family: 'Patchy Robots Regular';
+	font-weight: normal;
 }
 #contact p{
 	font-size: 0.8em;
