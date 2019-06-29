@@ -19,12 +19,7 @@ function scrollMan(){
 	event.preventDefault();
 	const hash = (this.hash)
 	const destination = document.querySelector(hash);
-	if(header.className ==='sticky'){
-		window.scrollTo(0, destination.offsetTop - 90)
-	}
-	else{
-		window.scrollTo(0, destination.offsetTop - 180)
-	}
+	window.scrollTo(0, destination.offsetTop - 90);
 }
 
 /****************************** ANIMATION APPARITION TEXT *******************************/

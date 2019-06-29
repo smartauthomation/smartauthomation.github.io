@@ -31,6 +31,7 @@ header
 	background-color: #FFFFFF;
 	width: 100%;
 	border-bottom: 1px solid rgba(196, 189, 189, 0.5);
+	position: absolute;
 }
 
 header h2
@@ -101,6 +102,8 @@ nav a{
 	background-repeat: no-repeat;
 	background-position:  65% 50%;
 	background-size: cover;
+	margin-top: 90px;
+	z-index: -1;
 }
 
 /********************************* ACTIVITY *********************************/
